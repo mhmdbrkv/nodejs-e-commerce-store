@@ -4,24 +4,45 @@
 
 A brief description of your e-commerce application. What features does it offer? What technology stack is used?
 
-## Features
+## Key Features
 
-- List your key features here.
-- User authentication
-- Product management
-- Shopping cart functionality
-- Payment integration
+- Database CRUD Operations: Perform Create, Read, Update, Delete operations on products, users, and orders.
+
+- User Profile Management: Users can manage personal information, order history, and preferences.
+
+- Authentication & Authorization: Secure user registration, login, and session management with JWT-based authentication.
+
+- Admin Dashboard: Admin interface for managing users, products, and orders.
+
+- Product Management: Add, update, or delete products, manage product categories, and inventory control.
+
+- Pagination & Search: Efficient product pagination and search capabilities for a smoother user experience.
+
+- Product Reviews: Users can leave reviews and ratings on products.
+
+- Shopping Cart & Checkout: Full shopping cart system, including adding/removing items and proceeding to checkout.
+
+- Payment Integration: Stripe integration for secure and smooth payments.
+
+- File Uploading: Upload product images with Cloudinary for optimized storage.
+
+- Email System: Nodemailer for sending transactional emails (e.g., order confirmations, password resets).
+
+- Error Handling: Centralized error handling system with detailed logging.
+
+- Security Enhancements: Built-in protection against common threats such as XSS, CSRF, and data validation errors.
+
+- Caching: Redis integration for caching and boosting performance.
 
 ## Technologies Used
 
-- Node.js
-- Express.js
-- MongoDB
-- Stripe
-- Redis
-- Multer
-- Cloudinary
-- Nodemailer
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- Caching: Redis
+- Payment Gateway: Stripe
+- File Storage: Cloudinary
+- Email Service: Nodemailer (via SMTP)
+- Security: JWT for authentication, bcrypt for password hashing
 
 ## Installation
 
@@ -42,29 +63,29 @@ A brief description of your e-commerce application. What features does it offer?
 
 ## Configuration (.env)
 
-- PORT
-- NODE_ENV
-- CLIENT_URL
-- DB_CONNECT
+- PORT=3000
+- NODE_ENV=development
+- CLIENT_URL=http://localhost:3000
+- DB_CONNECT=mongodb://localhost:27017/ecommerce
 
-- UPSTASH_REDIS_URL
+- UPSTASH_REDIS_URL=your-redis-url
 
-- JWT_ACCESS_SECRET_KEY
-- JWT_REFRESH_SECRET_KEY
-- JWT_ACCESS_EXPIRE_TIME
-- JWT_REFRESH_EXPIRE_TIME
+- JWT_ACCESS_SECRET_KEY=your-access-token-secret
+- JWT_REFRESH_SECRET_KEY=your-refresh-token-secret
+- JWT_ACCESS_EXPIRE_TIME=15m
+- JWT_REFRESH_EXPIRE_TIME=7d
 
 - EMAIL_HOST=smtp.gmail.com
 - EMAIL_PORT=587
-- EMAIL_USER
-- EMAIL_PASSWORD,
+- EMAIL_USER=your-email@example.com
+- EMAIL_PASSWORD=your-email-password
 
-- CLOUDINARY_CLOUD_NAME
-- CLOUDINARY_API_KEY
-- CLOUDINARY_API_SECRET_KEY
-- CLOUDINARY_URL
+- CLOUDINARY_CLOUD_NAME=your-cloudinary-cloud-name
+- CLOUDINARY_API_KEY=your-cloudinary-api-key
+- CLOUDINARY_API_SECRET_KEY=your-cloudinary-api-secret
+- CLOUDINARY_URL=your-cloudinary-url
 
-- STRIPE_SECRET
+- STRIPE_SECRET=your-stripe-secret-key
 
 ## Usage
 
