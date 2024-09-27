@@ -25,36 +25,37 @@ A brief description of your e-commerce application. What features does it offer?
    ```bash
    git clone https://github.com/mhmdbrkv/nodejs-e-commerce-store.git
 
-## Navigate 
-cd nodejs-e-commerce-store
-npm install
+## Navigate
+```bash
+   cd nodejs-e-commerce-store
+```
+```bash
+   npm install
+```
 
 ## Configuration (.env)
-PORT 
-NODE_ENV 
-CLIENT_URL 
-DB_CONNECT 
+PORT, 
+NODE_ENV, 
+CLIENT_URL, 
+DB_CONNECT,
 
-upstash 
-UPSTASH_REDIS_URL 
+UPSTASH_REDIS_URL, 
 
-JWT 
-JWT_ACCESS_SECRET_KEY 
-JWT_REFRESH_SECRET_KEY 
-JWT_ACCESS_EXPIRE_TIME 
-JWT_REFRESH_EXPIRE_TIME 
+JWT_ACCESS_SECRET_KEY, 
+JWT_REFRESH_SECRET_KEY, 
+JWT_ACCESS_EXPIRE_TIME, 
+JWT_REFRESH_EXPIRE_TIME, 
 
-Emails 
-EMAIL_HOST=smtp.gmail.com 
-EMAIL_PORT=587 
-EMAIL_USER 
-EMAIL_PASSWORD 
+EMAIL_HOST=smtp.gmail.com, 
+EMAIL_PORT=587, 
+EMAIL_USER, 
+EMAIL_PASSWORD, 
 
-Cloudinary 
-CLOUDINARY_CLOUD_NAME 
-CLOUDINARY_API_KEY 
-CLOUDINARY_API_SECRET_KEY 
-CLOUDINARY_URL 
+
+CLOUDINARY_CLOUD_NAME, 
+CLOUDINARY_API_KEY, 
+CLOUDINARY_API_SECRET_KEY, 
+CLOUDINARY_URL, 
 
 
 Stripe 
