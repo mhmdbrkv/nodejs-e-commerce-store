@@ -2,7 +2,7 @@
 
 ## Description
 
-A brief description of your e-commerce application. What features does it offer? What technology stack is used?
+A fully-featured e-commerce application built with Node.js, offering user authentication, product management, and secure payment processing. The platform includes an admin dashboard, shopping cart functionality, and product reviews. Technologies like MongoDB, Redis, and Stripe ensure efficient data handling, performance optimization, and secure transactions. Additionally, the app is designed with robust error handling, security measures, and email notifications.
 
 ## Key Features
 
