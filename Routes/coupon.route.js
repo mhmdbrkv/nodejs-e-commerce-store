@@ -13,7 +13,6 @@ import {
   createCoupon,
   updateCoupon,
   deleteCoupon,
-  applyCoupon,
 } from "../Controllers/coupon.controller.js";
 
 import { guard, allowedTo } from "../Middleware/auth.middleware.js";
@@ -24,8 +23,6 @@ router
   .route("/")
   .get(allowedTo("admin"), getCoupons)
   .post(allowedTo("admin"), createCouponValidator, createCoupon);
-
-router.post("/apply-coupon", applyCoupon);
 
 router.use(allowedTo("admin"));
 

@@ -184,16 +184,6 @@ export const checkoutSuccess = asyncHandler(async (req, res, next) => {
       await product.save();
     });
 
-    // update sold products
-    // newOrder.products.forEach(async (item) => {
-    //   await Product.findOneAndUpdate(
-    //     { _id: item.product },
-    //     {
-    //       $inc: { sold: +item.quantity, quantity: -item.quantity },
-    //     }
-    //   );
-    // });
-
     res.status(201).json({
       status: "success",
       message: "Payment success, order created and coupon handled",

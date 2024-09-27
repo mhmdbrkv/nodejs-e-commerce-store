@@ -18,6 +18,7 @@ import {
   setAccessTokenCookie,
   setRefreshTokenCookie,
 } from "../Utils/setCookie.js";
+import { userSanitizer } from "../Utils/dataSanitizer.js";
 
 export const signup = asyncHandler(async (req, res, next) => {
   // find the user by email
@@ -45,7 +46,7 @@ export const signup = asyncHandler(async (req, res, next) => {
   res.status(201).json({
     status: "success",
     message: "User created successfully",
-    data: newUser,
+    data: userSanitizer(newUser),
     token: accessToken,
   });
 });
@@ -71,7 +72,7 @@ export const login = asyncHandler(async (req, res, next) => {
   res.status(200).json({
     status: "success",
     message: "User logged in successfully",
-    data: user,
+    data: userSanitizer(user),
     token: accessToken,
   });
 });
