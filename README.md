@@ -1,94 +1,84 @@
-# Node.js E-Commerce Store
+Node.js E-Commerce Store
+Overview
+This is a Node.js-based RESTful API for an e-commerce platform, built with Express.js and MongoDB. It enables users to browse products, manage carts, and complete purchases, while admins can handle product and order management. The project showcases scalable architecture, secure authentication, and Object-Oriented Programming (OOP) principles for modular design, reflecting clean and maintainable code practices.
+Features
 
-## Description
+Product Management: CRUD operations for products (title, price, description, image).
+User Authentication: Secure signup/login with JWT-based authentication.
+Shopping Cart: Add, update, or remove items in the cart.
+Order Processing: Create and track orders with payment integration (e.g., Stripe).
+Data Validation: Robust input validation using Joi.
+Error Handling: Consistent error responses for reliable API usage.
+Database: MongoDB for flexible and scalable data storage.
 
-A fully-featured e-commerce application built with Node.js, offering user authentication, product management, and secure payment processing. The platform includes an admin dashboard, shopping cart functionality, and product reviews. Technologies like MongoDB, Redis, and Stripe ensure efficient data handling, performance optimization, and secure transactions. Additionally, the app is designed with robust error handling, security measures, and email notifications.
+Tech Stack
 
-## Key Features
+Node.js: Server-side runtime.
+Express.js: Framework for RESTful APIs.
+MongoDB: NoSQL database with Mongoose ODM.
+JWT: For secure user authentication.
+Joi: For request validation.
+Stripe: For payment processing.
+Git: Version control.
 
-- Database CRUD Operations: Perform Create, Read, Update, Delete operations on products, users, and orders.
+Installation
 
-- User Profile Management: Users can manage personal information, order history, and preferences.
+Clone the Repository:git clone https://github.com/mhmdbrkv/nodejs-e-commerce-store.git
+cd nodejs-e-commerce-store
 
-- Authentication & Authorization: Secure user registration, login, and session management with JWT-based authentication.
 
-- Admin Dashboard: Admin interface for managing users, products, and orders.
+Install Dependencies:npm install
 
-- Product Management: Add, update, or delete products, manage product categories, and inventory control.
 
-- Pagination & Search: Efficient product pagination and search capabilities for a smoother user experience.
+Set Up Environment Variables:Create a .env file in the root directory:PORT=3000
+MONGODB_URI=mongodb://localhost:27017/ecommerce
+JWT_SECRET=your_jwt_secret_key
+STRIPE_SECRET_KEY=your_stripe_secret_key
 
-- Product Reviews: Users can leave reviews and ratings on products.
 
-- Shopping Cart & Checkout: Full shopping cart system, including adding/removing items and proceeding to checkout.
+Start MongoDB:Ensure MongoDB is running locally or provide a cloud MongoDB URI.
+Run the Application:npm start
 
-- Payment Integration: Stripe integration for secure and smooth payments.
+The API is available at http://localhost:3000.
 
-- File Uploading: Upload product images with Cloudinary for optimized storage.
+API Endpoints
 
-- Email System: Nodemailer for sending transactional emails (e.g., order confirmations, password resets).
+POST /api/auth/signup: Register a new user.
+POST /api/auth/login: Authenticate and receive a JWT.
+GET /api/products: List all products.
+POST /api/products: Create a product (admin only).
+GET /api/products/:id: Get product details.
+PUT /api/products/:id: Update a product (admin only).
+DELETE /api/products/:id: Delete a product (admin only).
+POST /api/cart: Add item to cart.
+POST /api/orders: Create an order.
 
-- Error Handling: Centralized error handling system with detailed logging.
+Usage
 
-- Security Enhancements: Built-in protection against common threats such as XSS, CSRF, and data validation errors.
+Sign up or log in to obtain a JWT token.
+Include the token in the Authorization header (Bearer <token>) for protected routes.
+Browse products, manage your cart, and place orders via the API.
 
-- Caching: Redis integration for caching and boosting performance.
+Project Structure
+nodejs-e-commerce-store/
+├── controllers/      # API request handlers
+├── models/          # Mongoose schemas (Product, User, Order, Cart)
+├── routes/          # Express route definitions
+├── middlewares/     # Authentication and validation middleware
+├── config/          # Database and app configurations
+├── .env             # Environment variables
+├── server.js        # Application entry point
+└── README.md        # Project documentation
 
-## Technologies Used
+Contributing
 
-- Backend: Node.js, Express.js
-- Database: MongoDB
-- Caching: Redis
-- Payment Gateway: Stripe
-- File Storage: Cloudinary
-- Email Service: Nodemailer (via SMTP)
-- Security: JWT for authentication, bcrypt for password hashing
+Fork the repository.
+Create a feature branch (git checkout -b feature/your-feature).
+Commit changes (git commit -m "Add your feature").
+Push to the branch (git push origin feature/your-feature).
+Open a pull request.
 
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/mhmdbrkv/nodejs-e-commerce-store.git
-   ```
-
-## Navigate
-
-```bash
-   cd nodejs-e-commerce-store
-```
-
-```bash
-   npm install
-```
-
-## Configuration (.env)
-
-- PORT=3000
-- NODE_ENV=development
-- CLIENT_URL=http://localhost:3000
-- DB_CONNECT=mongodb://localhost:27017/ecommerce
-
-- UPSTASH_REDIS_URL=your-redis-url
-
-- JWT_ACCESS_SECRET_KEY=your-access-token-secret
-- JWT_REFRESH_SECRET_KEY=your-refresh-token-secret
-- JWT_ACCESS_EXPIRE_TIME=15m
-- JWT_REFRESH_EXPIRE_TIME=7d
-
-- EMAIL_HOST=smtp.gmail.com
-- EMAIL_PORT=587
-- EMAIL_USER=your-email@example.com
-- EMAIL_PASSWORD=your-email-password
-
-- CLOUDINARY_CLOUD_NAME=your-cloudinary-cloud-name
-- CLOUDINARY_API_KEY=your-cloudinary-api-key
-- CLOUDINARY_API_SECRET_KEY=your-cloudinary-api-secret
-- CLOUDINARY_URL=your-cloudinary-url
-
-- STRIPE_SECRET=your-stripe-secret-key
-
-## Usage
-
-```bash
-   npm start
-```
+License
+MIT License. See LICENSE for details.
+Contact
+Reach out to mhmdbrkv for questions or feedback.
